@@ -1,0 +1,9 @@
+{
+  "version": "2.0",
+  "envId": "your-cloudbase-env-id",
+  "app": {
+    "buildCommand": "npm run build",
+    "outputDir": "dist",
+    "deployPath": "/guangguang/"
+  }
+}
