@@ -1,0 +1,231 @@
+.site-admin {
+  padding-block: 40px 72px;
+}
+.admin-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+.admin-heading h1,
+.site-admin > h1 {
+  font-size: clamp(24px, 3vw, 36px);
+  letter-spacing: -0.04em;
+  margin: 12px 0;
+  font-weight: 600;
+}
+.admin-heading p:last-child,
+.admin-help {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+.admin-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 0;
+  border-block: 1px solid var(--line);
+}
+.admin-actions small {
+  display: block;
+  color: var(--muted);
+  margin-top: 6px;
+  font-size: 11px;
+}
+.admin-actions > div:last-child {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.admin-actions button {
+  white-space: nowrap;
+}
+.admin-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 48px;
+  align-items: start;
+  margin-top: 32px;
+}
+.admin-fields {
+  min-width: 0;
+}
+.admin-section {
+  padding: 0 0 28px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid var(--line);
+}
+.admin-section h2 {
+  font-size: 21px;
+  margin: 10px 0 20px;
+  font-weight: 600;
+}
+.admin-fields label {
+  display: block;
+  font-size: 13px;
+  margin-top: 16px;
+}
+.admin-fields input:not([type="checkbox"]):not([type="file"]) {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 11px 12px;
+  min-height: 44px;
+  border: 1px solid var(--line);
+  background: white;
+  border-radius: 9px;
+  font-size: 16px;
+  margin-top: 7px;
+}
+.admin-fields input:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+.admin-fields .admin-check {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  min-height: 44px;
+  margin: 0;
+}
+.admin-check input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--green);
+}
+.admin-slide {
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  margin: 20px 0;
+}
+.admin-slide-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.admin-slide-head > div {
+  display: flex;
+}
+.admin-slide-head button {
+  width: 40px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+}
+.admin-slide-head button:hover {
+  background: var(--soft);
+}
+.admin-thumbnail {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: var(--soft);
+}
+.admin-fields .admin-upload {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 0;
+  font-weight: 500;
+}
+.admin-upload input {
+  max-width: 100%;
+  width: 100%;
+  margin-top: 4px;
+  font-size: 13px;
+}
+.admin-preview {
+  position: sticky;
+  top: 104px;
+  min-width: 0;
+}
+.admin-preview h2 {
+  font-size: clamp(24px, 2.5vw, 38px);
+  line-height: 1.5;
+  font-weight: 600;
+  margin: 12px 0;
+  overflow-wrap: anywhere;
+}
+.admin-preview h2 span {
+  color: var(--green);
+}
+.preview-eyebrow {
+  margin-top: 22px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.admin-preview > p {
+  overflow-wrap: anywhere;
+}
+.admin-preview .home-landscape {
+  height: 400px;
+  margin: 22px 0 12px;
+}
+.admin-notice,
+.admin-alert {
+  margin-top: 16px;
+  padding: 14px 18px;
+  border-radius: 9px;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+.admin-notice {
+  background: var(--soft);
+  color: var(--green);
+}
+.admin-alert {
+  background: #fff1e7;
+  color: #8d421f;
+}
+.site-admin button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.home-intro h1,
+.home-description,
+.home-intro > .eyebrow {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 1000px) {
+  .admin-layout {
+    gap: 24px;
+  }
+  .admin-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+@media (max-width: 700px) {
+  .admin-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .admin-preview {
+    position: static;
+  }
+  .admin-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .admin-slide {
+    padding: 14px;
+  }
+  .admin-actions .btn {
+    min-height: 44px;
+    padding-inline: 12px;
+    font-size: 12px;
+  }
+  .admin-preview .home-landscape {
+    height: 365px;
+  }
+}

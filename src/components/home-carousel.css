@@ -1,0 +1,118 @@
+.home-carousel .landscape-note {
+  bottom: 108px;
+}
+.home-carousel figcaption {
+  bottom: 82px;
+  right: 24px;
+  overflow-wrap: anywhere;
+}
+.home-carousel .landscape-note strong,
+.home-carousel .landscape-note div span {
+  overflow-wrap: anywhere;
+}
+.home-carousel .landscape-topline {
+  pointer-events: none;
+}
+.carousel-controls {
+  position: absolute;
+  z-index: 2;
+  bottom: 18px;
+  inset-inline: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.carousel-controls button {
+  min-width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  color: white;
+  border: 1px solid #ffffff55;
+  background: #163b30b8;
+  border-radius: 50%;
+}
+.carousel-controls button:focus-visible {
+  outline: 3px solid #f0cf84;
+  outline-offset: 3px;
+}
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.carousel-dots button {
+  min-width: 28px;
+  border: 0;
+  background: transparent;
+  border-radius: 8px;
+}
+.carousel-dots span {
+  width: 6px;
+  height: 6px;
+  background: #ffffff90;
+  border-radius: 8px;
+  transition: width 0.2s;
+}
+.carousel-dots [aria-current] span {
+  width: 20px;
+  background: white;
+}
+.home-carousel .landscape-note {
+  max-height: 45%;
+  overflow: auto;
+}
+.carousel-empty {
+  display: grid;
+  place-items: center;
+  min-height: 300px;
+  border: 1px dashed var(--line);
+  border-radius: 16px;
+  color: var(--muted);
+}
+@media (max-width: 500px) {
+  .carousel-controls {
+    inset-inline: 10px;
+    gap: 2px;
+  }
+  .carousel-controls button {
+    min-width: 38px;
+    height: 44px;
+  }
+  .carousel-dots button {
+    min-width: 22px;
+  }
+  .carousel-dots [aria-current] span {
+    width: 14px;
+  }
+  .home-carousel .landscape-note {
+    bottom: 100px;
+  }
+  .home-carousel figcaption {
+    bottom: 72px;
+    left: 18px;
+    font-size: 9px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-carousel > img {
+    animation: none !important;
+  }
+  .carousel-dots span {
+    transition: none;
+  }
+}
+
+.carousel-dots { min-width:0; overflow-x:auto; flex-wrap:nowrap; justify-content:flex-start; }
+.carousel-dots button { flex-shrink:0; }
+.home-intro h1,.home-description,.home-intro>.eyebrow { overflow-wrap:anywhere; }
+/* Keep long source captions below the card and above the playback controls. */
+.home-carousel figcaption {
+  line-height: 1.4;
+  max-height: 2.8em;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}

@@ -1,0 +1,5 @@
+Simplified atlas for scenery journaling. Not a navigation map.
+Source: Natural Earth, public domain. https://www.naturalearthdata.com/about/terms-of-use/
+Country data: ne_50m_admin_0_countries; subdivisions: ne_10m_admin_1_states_provinces.
+Retrieved: 2026-10-09. Country outlines retain the full 50m source detail. Province boundaries simplified as shared topology using Mapshaper, 500 m weighted threshold; projected equirectangular.
+Hong Kong, Macao and Taiwan are grouped under the China selector.
